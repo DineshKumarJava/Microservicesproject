@@ -1,0 +1,14 @@
+zuul:
+  prefix: /api
+  ignoredServices: '*'
+  routes:
+    user-service: /user/** 
+    
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          strategy: THREAD
+          thread:
+            timeoutInMilliseconds: 60000   
