@@ -1,0 +1,21 @@
+pipeline{
+	agent any
+		stages{
+			stage("one"){
+				steps{
+					echo "Hi  my first pipeline in jenkins"
+				}
+			}
+			stage("two"){
+				steps{
+					input("do you want to proceed")
+				}
+			}
+			stage("three"){
+				steps{
+				echo ("finished executin")
+				}
+			}
+		}
+
+}
